@@ -36,5 +36,44 @@ namespace _06
                 booksBindingSource.DataSource = db.Books.ToList();
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form3 frm = new Form3();
+
+            Books books = (Books)booksBindingSource.Current;
+            frm.db = db;
+            frm.books = books;
+
+            DialogResult dr = frm.ShowDialog();
+
+            if (dr == DialogResult.OK)
+            {
+                booksBindingSource.DataSource = db.Books.ToList();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Books books = (Books)booksBindingSource.Current;
+
+            DialogResult dr = MessageBox.Show("ВЫ дествительно хотите удалить роль - " +
+               books.ID.ToString(), "Удаление роли", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dr == DialogResult.Yes)
+            {
+                db.Books.Remove(books);
+
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                booksBindingSource.DataSource = db.Books.ToList();
+            }
+        }
     }
 }
