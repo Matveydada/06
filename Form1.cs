@@ -22,5 +22,19 @@ namespace _06
         {
             booksBindingSource.DataSource = db.Books.ToList();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+
+            form2.db = db;
+
+            DialogResult dr = form2.ShowDialog();
+
+            if (dr == DialogResult.OK)
+            {
+                booksBindingSource.DataSource = db.Books.ToList();
+            }
+        }
     }
 }

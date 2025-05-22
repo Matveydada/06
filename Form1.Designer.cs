@@ -30,11 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.booksBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.avtorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.booksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -53,10 +54,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(450, 114);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // booksBindingSource
-            // 
-            this.booksBindingSource.DataSource = typeof(_06.Books);
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -82,11 +79,26 @@
             this.pageDataGridViewTextBoxColumn.HeaderText = "Page";
             this.pageDataGridViewTextBoxColumn.Name = "pageDataGridViewTextBoxColumn";
             // 
+            // booksBindingSource
+            // 
+            this.booksBindingSource.DataSource = typeof(_06.Books);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(220, 325);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 49);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Добавить данные";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -105,6 +117,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pageDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource booksBindingSource;
+        private System.Windows.Forms.Button button1;
     }
 }
 

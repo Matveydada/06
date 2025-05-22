@@ -15,3 +15,4 @@ Z:\24-25 уч год\31ИС\Паневкин\06\06\bin\Debug\EntityFramework.Sql
 Z:\24-25 уч год\31ИС\Паневкин\06\06\bin\Debug\ru\EntityFramework.resources.dll
 Z:\24-25 уч год\31ИС\Паневкин\06\06\obj\Debug\06.csproj.CopyComplete
 Z:\24-25 уч год\31ИС\Паневкин\06\06\obj\Debug\_06.Form1.resources
+Z:\24-25 уч год\31ИС\Паневкин\06\06\obj\Debug\_06.Form2.resources
